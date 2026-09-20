@@ -1,0 +1,96 @@
+name: codexa
+description: "Codexa — A library of your own"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # State Management
+  flutter_riverpod: ^2.6.1
+
+  # Storage
+  shared_preferences: ^2.3.4
+  flutter_secure_storage: ^9.2.4
+  sqflite: ^2.4.1
+  path_provider: ^2.1.5
+
+  # Google Drive
+  google_sign_in: ^6.2.2
+  http: ^1.2.2
+
+  # UI
+  google_fonts: ^6.2.1
+  lucide_icons: ^0.257.0
+
+  # PDF Viewer
+  pdfrx: ^2.2.24
+
+  # Video
+  video_player: ^2.9.2
+
+  # Utils
+  intl: 0.20.2
+  connectivity_plus: ^6.1.2
+  path: ^1.9.0
+  uuid: ^4.5.1
+  image: ^4.8.0
+  package_info_plus: ^8.1.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  sqflite_common_ffi: ^2.3.3
+  flutter_launcher_icons: ^0.14.3
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/logos/codexa_monogram.png"
+  adaptive_icon_background: "#1C1C1E"
+  adaptive_icon_foreground: "assets/logos/codexa_monogram.png"
+  web:
+    generate: true
+    image_path: "assets/logos/codexa_monogram.png"
+    background_color: "#1C1C1E"
+  windows:
+    generate: true
+    image_path: "assets/logos/codexa_monogram.png"
+  macos:
+    generate: true
+    image_path: "assets/logos/codexa_monogram.png"
+
+flutter:
+  uses-material-design: true
+
+  # Only the files the app actually loads are bundled. The remaining brand
+  # artwork under assets/ stays in the repository for the README, launcher-icon
+  # generation and design provenance, but is deliberately not shipped.
+  assets:
+    - assets/videos/splash_animation.mp4
+    - assets/logos/header_logo_full.png
+
+  fonts:
+    - family: BodoniModa
+      fonts:
+        - asset: assets/fonts/BodoniModa-Regular.ttf
+        - asset: assets/fonts/BodoniModa-Italic.ttf
+          style: italic
+    - family: Literata
+      fonts:
+        - asset: assets/fonts/Literata-Regular.ttf
+        - asset: assets/fonts/Literata-Italic.ttf
+          style: italic
+    - family: HankenGrotesk
+      fonts:
+        - asset: assets/fonts/HankenGrotesk-Regular.ttf
+    - family: NotoNaskhArabic
+      fonts:
+        - asset: assets/fonts/NotoNaskhArabic-Regular.ttf
