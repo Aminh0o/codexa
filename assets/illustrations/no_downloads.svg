@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260">
+<rect width="320" height="260" fill="#FFFDF8"/>
+<g fill="none" stroke="#191714" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M45 128h110M55 128V70h100v58M66 70V54h78v16"/><path d="M80 91h48M80 104h48M101 91v25M91 107l10 10 10-10"/></g>
+<text x="160" y="180" text-anchor="middle" font-family="Literata, Georgia, serif" font-size="16" fill="#191714">Nothing is offline yet.</text>
+<text x="160" y="204" text-anchor="middle" font-family="Hanken Grotesk, Arial, sans-serif" font-size="10" fill="#191714">Download a book to read it without internet.</text>
+</svg>

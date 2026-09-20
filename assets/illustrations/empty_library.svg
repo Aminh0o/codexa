@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" fill="none" role="img">
+<title>Codexa empty library</title>
+<g stroke="#242018" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M122 352V132h396v220M108 352h424M96 368h448"/>
+<path d="M140 150h360M140 150v190M500 150v190"/>
+<path d="M155 181v113M179 174v120M207 189v105M235 168v126M265 184v110M295 176v118"/>
+<path d="M155 181h18M179 174h24M207 189h28M235 168h30M265 184h30M295 176h28"/>
+<path d="M342 294V164h128v130M362 294V190M389 294V174M417 294V184M445 294V166"/>
+<path d="M362 190h27M389 174h28M417 184h28M445 166h25M342 314h128"/>
+<g stroke="#B08A4A" stroke-width="2"><path d="M334 132h144M326 126h160M108 132h28M496 132h36"/><path d="M320 117c-10-13-10-27 0-40 10 13 10 27 0 40zM320 96v20"/></g>
+<g stroke="#665F53" stroke-width="1.5"><path d="M137 204h10M137 217h10M137 230h10M306 198h18M306 211h18M306 224h18M306 237h18"/></g></g>
+</svg>

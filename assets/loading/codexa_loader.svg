@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+<rect width="240" height="240" fill="#F8F1E5"/>
+<g transform="translate(120 120)">
+  <circle r="55" fill="none" stroke="#B08A4A" stroke-width="2" opacity=".22"/>
+  <path d="M0-55 A55 55 0 0 1 48 27" fill="none" stroke="#B08A4A" stroke-width="4" stroke-linecap="square">
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="2.4s" repeatCount="indefinite"/>
+  </path>
+  <text x="0" y="15" text-anchor="middle" font-family="Bodoni Moda, Didot, Times New Roman, serif" font-size="62" fill="#191714">C</text>
+</g>
+</svg>
