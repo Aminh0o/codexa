@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>Codexa - Book Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#dddad2",
+                        "inverse-on-surface": "#f4f0e8",
+                        "secondary-fixed": "#ede1cd",
+                        "surface-container-highest": "#e6e2da",
+                        "on-secondary-container": "#6a6252",
+                        "tertiary-fixed": "#ffdeac",
+                        "tertiary": "#000000",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#87837f",
+                        "tertiary-container": "#281900",
+                        "on-surface-variant": "#4b463f",
+                        "inverse-surface": "#31302b",
+                        "on-primary-fixed-variant": "#494642",
+                        "surface-tint": "#615e5a",
+                        "primary-fixed-dim": "#cbc5c0",
+                        "secondary-container": "#eadeca",
+                        "inverse-primary": "#cbc5c0",
+                        "surface-container-high": "#ece8e0",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface": "#fdf9f1",
+                        "on-tertiary-fixed-variant": "#5e4105",
+                        "on-background": "#1c1c17",
+                        "on-tertiary-fixed": "#281900",
+                        "primary-fixed": "#e8e1dc",
+                        "primary": "#000000",
+                        "on-surface": "#1c1c17",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#1d1b18",
+                        "surface-container": "#f1ede6",
+                        "outline-variant": "#cdc5bc",
+                        "secondary": "#665d4e",
+                        "outline": "#7c766e",
+                        "on-tertiary-container": "#a27e3f",
+                        "on-primary-fixed": "#1d1b18",
+                        "secondary-fixed-dim": "#d0c5b2",
+                        "surface-container-low": "#f7f3eb",
+                        "surface-bright": "#fdf9f1",
+                        "tertiary-fixed-dim": "#ebc07a",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#201b0f",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e6e2da",
+                        "background": "#fdf9f1",
+                        "on-secondary-fixed-variant": "#4d4637"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "1.25rem",
+                        "gutter": "1.5rem",
+                        "stack-md": "24px",
+                        "margin-page": "2rem",
+                        "unit": "4px",
+                        "stack-lg": "48px",
+                        "stack-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Hanken Grotesk"],
+                        "display-lg": ["Bodoni Moda"],
+                        "headline-lg-mobile": ["Bodoni Moda"],
+                        "label-md": ["Hanken Grotesk"],
+                        "body-md": ["Literata"],
+                        "body-lg": ["Literata"],
+                        "title-md": ["Bodoni Moda"],
+                        "headline-lg": ["Bodoni Moda"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["11px", { "lineHeight": "1.2", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "title-md": ["22px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { background-color: theme('colors.background'); color: theme('colors.on-background'); }
+        .hairline-b { border-bottom: 0.5px solid theme('colors.outline-variant'); }
+        .hairline-t { border-top: 0.5px solid theme('colors.outline-variant'); }
+        .engraved-border { border: 1px solid theme('colors.outline-variant'); box-shadow: 0 1px 0 theme('colors.surface-container-lowest'); }
+        
+        /* Smooth scrolling and transitions */
+        html { scroll-behavior: smooth; }
+        .transition-all-slow { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased min-h-screen flex flex-col md:flex-row pb-24 md:pb-0 relative overflow-x-hidden">
+<!-- Mobile Top App Bar (Suppressing on Desktop) -->
+<header class="md:hidden flex justify-between items-center w-full px-margin-mobile h-16 bg-surface border-b-[0.5px] border-outline-variant sticky top-0 z-40 transition-all duration-300">
+<button aria-label="Back" class="p-2 -ml-2 text-primary hover:bg-secondary-container transition-colors duration-300 rounded">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile tracking-widest text-primary">CODEXA</h1>
+<div class="flex gap-2">
+<button aria-label="Search" class="p-2 text-primary hover:bg-secondary-container transition-colors duration-300 rounded">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</header>
+<!-- Navigation Drawer (Desktop) -->
+<aside class="hidden md:flex flex-col h-screen py-stack-lg px-margin-page bg-surface-container-low border-r-[0.5px] border-outline-variant h-full w-80 rounded-r-none sticky top-0 z-40">
+<div class="flex items-center gap-4 mb-12">
+<div class="w-12 h-12 rounded-full overflow-hidden engraved-border">
+<img class="w-full h-full object-cover" data-alt="A distinguished scholarly portrait avatar, classical lighting, sepia tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdYYr_kugZkA5DrA27d3oTo7nPtjdGZWhVhvuGJzrPX6uDNF-3djzesqmGBZW8Rt8GhGKAvyeSm0btgp8GZWH7ZNQAShaaxnzqB_qIIGz_VACr_soynnMn6xMbY-1ngn-4j8PXQYq6SqWdZSxvgJuQxKxvSBM6I3-KAobNQf4LpK_EnfHhBAxYoop1xOjf9jLkRrrR2ZL8bJ6JX2SZvhVeptgBiQ5CIv5AiCHkZvE4b37nQQtz7H9wnQ"/>
+</div>
+<div>
+<h2 class="font-title-md text-title-md text-primary">Ex Libris</h2>
+<p class="font-label-md text-label-md text-on-surface-variant">Personal Archive</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1 opacity-70">128 Volumes</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 flex-grow">
+<!-- Active Tab: Exact match intent for Library/Books -->
+<a class="flex items-center gap-4 px-4 py-3 bg-secondary-fixed text-on-secondary-container font-medium rounded hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-label-md text-label-md">All Books</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all rounded" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-label-md text-label-md">Favorites</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all rounded" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-md text-label-md">Recent</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all rounded" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-label-md text-label-md">Archive</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high transition-all rounded" href="#">
+<span class="material-symbols-outlined">sell</span>
+<span class="font-label-md text-label-md">Tags</span>
+</a>
+</nav>
+<div class="mt-auto pt-8 border-t-[0.5px] border-outline-variant">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-widest text-center">CODEXA</h1>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col items-center w-full max-w-[1200px] mx-auto px-margin-mobile md:px-margin-page py-stack-md md:py-stack-lg relative">
+<!-- Book Detail Header Area (Bento-ish asymmetrical layout) -->
+<section class="w-full flex flex-col md:flex-row gap-gutter md:gap-[48px] items-start mb-stack-lg relative">
+<!-- Cover Art Column -->
+<div class="w-full md:w-1/3 max-w-[320px] shrink-0 mx-auto md:mx-0 sticky top-24">
+<div class="aspect-[2/3] w-full bg-surface-container-highest engraved-border p-2 bg-secondary-fixed/20 relative group">
+<img class="w-full h-full object-cover grayscale-[20%] sepia-[10%] group-hover:grayscale-0 transition-all duration-500 shadow-sm" data-alt="A vintage, minimalist book cover design for 'The Feynman Lectures on Physics'. Pale parchment background with stark, geometric diagrams of particle paths in deep charcoal ink. The typography is elegant, serif, and restrained. Subtle paper texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb7rnw1ByureKMtCPxADBrYOdRM0LgYWt7742HfavzszabgdUuHLyir7EGghBvwuPg3b1w61GGZkREmx8HR3wiI8Krxqjqp6Fn1D_H_yP0j_yEdYSmBbhs79ghufPr-RFN5Tgs7egKneheX_YjSBpmc41EaSSqpoXZrljei2QhmbQa4sme0_bW-htP-FPT_KU40qSGbqC8IBfHmmygE78kiWRONV_Ry7hOCSnwJXmXGNFqT9UN4w7G0g"/>
+<div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+<div class="bg-surface/90 px-2 py-1 font-label-sm text-label-sm text-primary engraved-border backdrop-blur-sm">PDF</div>
+</div>
+</div>
+</div>
+<!-- Meta & Actions Column -->
+<div class="w-full md:w-2/3 flex flex-col h-full pt-4 md:pt-0">
+<!-- Decorative Label -->
+<div class="flex items-center gap-2 mb-stack-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+<span class="font-label-sm text-label-sm tracking-widest uppercase">Science / Physics</span>
+</div>
+<h2 class="font-display-lg text-display-lg md:text-[56px] text-primary leading-tight mb-2 pr-4">The Feynman Lectures</h2>
+<p class="font-title-md text-title-md text-on-surface-variant mb-stack-md">Richard P. Feynman, Robert B. Leighton, Matthew Sands</p>
+<!-- Progress & Stats Area -->
+<div class="flex flex-col gap-4 mb-stack-lg bg-surface-container-low p-6 engraved-border">
+<div class="flex justify-between items-baseline mb-2">
+<span class="font-label-md text-label-md text-primary font-bold">Volume I: Mainly Mechanics, Radiation, and Heat</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container">82% Completed</span>
+</div>
+<!-- Tactile Progress Bar -->
+<div class="h-[2px] w-full bg-outline-variant/30 relative">
+<div class="absolute top-0 left-0 h-full bg-on-tertiary-container" style="width: 82%;"></div>
+<!-- Current Position Marker -->
+<div class="absolute top-1/2 -translate-y-1/2 w-2 h-4 bg-primary" style="left: 82%;"></div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 italic">Last read: Chapter 39 - The Kinetic Theory of Gases</p>
+</div>
+<!-- Primary Actions -->
+<div class="flex flex-wrap gap-4 mt-auto">
+<button class="bg-primary text-on-primary px-8 py-3 font-label-md text-label-md hover:bg-primary-container transition-all-slow flex items-center gap-2 group">
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">menu_book</span>
+                        Continue Reading
+                    </button>
+<button class="border border-primary text-primary px-6 py-3 font-label-md text-label-md hover:bg-surface-container-high transition-all-slow flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+                        Sync Progress
+                    </button>
+<button aria-label="More Options" class="p-3 border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary transition-all-slow flex items-center justify-center rounded-none">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Book Structure / Table of Contents -->
+<section class="w-full mt-stack-md">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-stack-md hairline-b pb-4">Table of Contents</h3>
+<div class="flex flex-col">
+<!-- Part Header -->
+<div class="py-4 bg-surface-container-low px-4 border-l-4 border-primary mb-2 mt-4">
+<h4 class="font-label-sm text-label-sm text-primary tracking-[0.15em] uppercase">PART I — FUNDAMENTALS</h4>
+</div>
+<!-- Chapter Rows -->
+<a class="flex items-center justify-between py-4 px-4 hover:bg-surface-container-lowest hairline-b group transition-colors" href="#">
+<div class="flex items-center gap-4">
+<span class="font-label-sm text-label-sm text-on-surface-variant w-8">01</span>
+<span class="font-body-md text-body-md text-primary group-hover:ml-2 transition-all">Atoms in Motion</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</a>
+<a class="flex items-center justify-between py-4 px-4 hover:bg-surface-container-lowest hairline-b group transition-colors" href="#">
+<div class="flex items-center gap-4">
+<span class="font-label-sm text-label-sm text-on-surface-variant w-8">02</span>
+<span class="font-body-md text-body-md text-primary group-hover:ml-2 transition-all">Basic Physics</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</a>
+<a class="flex items-center justify-between py-4 px-4 hover:bg-surface-container-lowest hairline-b group transition-colors bg-surface-container-highest/20" href="#">
+<div class="flex items-center gap-4">
+<span class="font-label-sm text-label-sm text-on-tertiary-container w-8">03</span>
+<span class="font-body-md text-body-md text-primary font-medium flex items-center gap-2">
+                            The Relation of Physics to Other Sciences
+                            <span class="w-2 h-2 rounded-full bg-on-tertiary-container inline-block"></span>
+</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-tertiary-container">CURRENT</span>
+</a>
+<div class="py-4 bg-surface-container-low px-4 border-l-4 border-outline-variant mb-2 mt-8 opacity-70">
+<h4 class="font-label-sm text-label-sm text-on-surface-variant tracking-[0.15em] uppercase">PART II — MECHANICS</h4>
+</div>
+<a class="flex items-center justify-between py-4 px-4 hover:bg-surface-container-lowest hairline-b group transition-colors opacity-70" href="#">
+<div class="flex items-center gap-4">
+<span class="font-label-sm text-label-sm text-on-surface-variant w-8">04</span>
+<span class="font-body-md text-body-md text-primary group-hover:ml-2 transition-all">Conservation of Energy</span>
+</div>
+</a>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe bg-surface border-t-[0.5px] border-outline-variant h-[72px]">
+<!-- Active: Library -->
+<a class="flex flex-col items-center justify-center text-primary font-bold border-t-2 border-primary pt-2 pb-2 w-16 opacity-100 transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_library</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider mt-1 text-[10px]">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant pt-2 pb-2 w-16 hover:text-primary transition-colors opacity-70 hover:opacity-100" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider mt-1 text-[10px]">Browse</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant pt-2 pb-2 w-16 hover:text-primary transition-colors opacity-70 hover:opacity-100" href="#">
+<span class="material-symbols-outlined">download_for_offline</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider mt-1 text-[10px]">Downloads</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant pt-2 pb-2 w-16 hover:text-primary transition-colors opacity-70 hover:opacity-100" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider mt-1 text-[10px]">Settings</span>
+</a>
+</nav>
+</body></html>

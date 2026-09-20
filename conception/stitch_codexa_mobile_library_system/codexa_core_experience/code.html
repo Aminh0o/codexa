@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CODEXA - A Library of Your Own</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-dim": "#dddad2",
+                      "inverse-on-surface": "#f4f0e8",
+                      "secondary-fixed": "#ede1cd",
+                      "surface-container-highest": "#e6e2da",
+                      "on-secondary-container": "#6a6252",
+                      "tertiary-fixed": "#ffdeac",
+                      "tertiary": "#000000",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "on-primary-container": "#87837f",
+                      "tertiary-container": "#281900",
+                      "on-surface-variant": "#4b463f",
+                      "inverse-surface": "#31302b",
+                      "on-primary-fixed-variant": "#494642",
+                      "surface-tint": "#615e5a",
+                      "primary-fixed-dim": "#cbc5c0",
+                      "secondary-container": "#eadeca",
+                      "inverse-primary": "#cbc5c0",
+                      "surface-container-high": "#ece8e0",
+                      "error": "#ba1a1a",
+                      "on-primary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "surface": "#fdf9f1",
+                      "on-tertiary-fixed-variant": "#5e4105",
+                      "on-background": "#1c1c17",
+                      "on-tertiary-fixed": "#281900",
+                      "primary-fixed": "#e8e1dc",
+                      "primary": "#000000",
+                      "on-surface": "#1c1c17",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-container": "#1d1b18",
+                      "surface-container": "#f1ede6",
+                      "outline-variant": "#cdc5bc",
+                      "secondary": "#665d4e",
+                      "outline": "#7c766e",
+                      "on-tertiary-container": "#a27e3f",
+                      "on-primary-fixed": "#1d1b18",
+                      "secondary-fixed-dim": "#d0c5b2",
+                      "surface-container-low": "#f7f3eb",
+                      "surface-bright": "#fdf9f1",
+                      "tertiary-fixed-dim": "#ebc07a",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed": "#201b0f",
+                      "on-error": "#ffffff",
+                      "surface-variant": "#e6e2da",
+                      "background": "#fdf9f1",
+                      "on-secondary-fixed-variant": "#4d4637",
+                      "parchment": "#FBF7EF",
+                      "aged-paper": "#E9DDC9",
+                      "ink": "#191714",
+                      "warm-white": "#FFFDF8",
+                      "antique-gold": "#D4AF37"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0px",
+                      "lg": "0px",
+                      "xl": "0px",
+                      "full": "0px"
+              },
+              "spacing": {
+                      "margin-mobile": "1.25rem",
+                      "gutter": "1.5rem",
+                      "stack-md": "24px",
+                      "margin-page": "2rem",
+                      "unit": "4px",
+                      "stack-lg": "48px",
+                      "stack-sm": "8px"
+              },
+              "fontFamily": {
+                      "label-sm": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-lg": [
+                              "Bodoni Moda"
+                      ],
+                      "headline-lg-mobile": [
+                              "Bodoni Moda"
+                      ],
+                      "label-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-md": [
+                              "Literata"
+                      ],
+                      "body-lg": [
+                              "Literata"
+                      ],
+                      "title-md": [
+                              "Bodoni Moda"
+                      ],
+                      "headline-lg": [
+                              "Bodoni Moda"
+                      ]
+              },
+              "fontSize": {
+                      "label-sm": [
+                              "11px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.08em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "title-md": [
+                              "22px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.warm-white');
+            color: theme('colors.ink');
+        }
+        .engraved-border {
+            border: 1px solid theme('colors.aged-paper');
+            border-bottom-color: theme('colors.surface-container-high');
+            border-right-color: theme('colors.surface-container-high');
+        }
+        .engraved-divider {
+            height: 1px;
+            background-color: theme('colors.aged-paper');
+            border-bottom: 1px solid theme('colors.surface-container-high');
+        }
+        .book-cover-effect {
+            box-shadow: inset 1px 0 0 rgba(255,255,255,0.4), inset -1px 0 0 rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col relative overflow-x-hidden selection:bg-aged-paper selection:text-ink">
+<!-- Splash Screen (Absolute overlay for demonstration, hide via JS later) -->
+<div class="fixed inset-0 z-[100] bg-surface flex flex-col items-center justify-center transition-opacity duration-1000" id="splash-screen">
+<div class="relative w-48 h-48 mb-stack-lg">
+<img alt="Codexa Emblem" class="w-full h-full object-contain opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLVXwvEp3p0owFj4lacXQjw8A08WaZ8EoHnY1peTkOf3f2tL8bb1d2hhmsaPbgjSchBNBBP1Q3THZ_seT89vkUyg8nXX05jRaO4i9ppNqvm-4QQqVbxu0kOdyxQVMi_59_hpQnRBXFDF7NgFyKKXpuQ_J1ZS2icgN-jKSNKbzEdRBU_QZzbRMc3UbGYllpt43jkdu6bQEqNI0YIof50Jnl0UIZYH8MTfDQS_MCnNgRAGxmAo1JzDzw3A"/>
+</div>
+<h1 class="font-display-lg text-display-lg text-ink tracking-wide mb-stack-sm">CODEXA</h1>
+<p class="font-body-md text-body-md text-on-surface-variant italic">A library of your own</p>
+<div class="mt-stack-lg w-24 h-[1px] bg-aged-paper relative">
+<div class="absolute -top-[3px] left-1/2 -translate-x-1/2 w-2 h-2 border border-aged-paper rotate-45 bg-warm-white"></div>
+</div>
+</div>
+<!-- Main App Container -->
+<div class="flex-1 flex flex-col opacity-0 transition-opacity duration-1000 pointer-events-none md:flex-row max-w-7xl mx-auto w-full relative" id="app-container">
+<!-- Desktop SideNav (Hidden on mobile) -->
+<aside class="hidden md:flex h-screen sticky top-0 w-64 bg-surface-container-lowest border-r border-aged-paper flex-col py-stack-lg px-margin-page z-40">
+<div class="flex items-center gap-4 mb-stack-lg border-b border-aged-paper pb-stack-md">
+<div class="w-12 h-12 rounded-full border border-aged-paper overflow-hidden bg-parchment flex items-center justify-center">
+<span class="font-display-lg text-title-md text-ink">E</span>
+</div>
+<div>
+<h2 class="font-title-md text-title-md text-ink">Ex Libris</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Personal Archive</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 flex-1">
+<a class="flex items-center gap-4 px-3 py-2 bg-aged-paper text-ink group relative" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">local_library</span>
+<span class="font-label-md text-label-md font-bold">Library</span>
+<div class="absolute left-0 top-0 bottom-0 w-[2px] bg-ink"></div>
+</a>
+<a class="flex items-center gap-4 px-3 py-2 text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px]">explore</span>
+<span class="font-label-md text-label-md">Browse</span>
+</a>
+<a class="flex items-center gap-4 px-3 py-2 text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px]">history</span>
+<span class="font-label-md text-label-md">Recent</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col min-h-screen pb-24 md:pb-0">
+<!-- Mobile TopAppBar -->
+<header class="md:hidden sticky top-0 z-40 bg-surface flex justify-between items-center w-full px-margin-mobile h-16 border-b border-aged-paper">
+<button class="text-ink hover:bg-secondary-container transition-colors p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile tracking-widest text-ink">CODEXA</h1>
+<button class="text-ink hover:bg-secondary-container transition-colors p-2">
+<span class="material-symbols-outlined">search</span>
+</button>
+</header>
+<div class="flex-1 px-margin-mobile md:px-gutter py-stack-lg max-w-4xl mx-auto w-full">
+<!-- Page Header -->
+<div class="mb-stack-lg text-center md:text-left border-b border-aged-paper pb-stack-md">
+<h2 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-ink mb-2">Your Library</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">12 volumes · 438 documents</p>
+</div>
+<!-- Continue Reading Hero Card -->
+<section class="mb-stack-lg">
+<h3 class="font-label-md text-label-md text-ink uppercase tracking-wider mb-stack-sm flex items-center gap-2">
+<span class="w-4 h-[1px] bg-ink"></span> Continue Reading
+                    </h3>
+<div class="bg-parchment border border-ink p-stack-md flex flex-col md:flex-row gap-gutter group cursor-pointer hover:bg-surface-container-low transition-colors duration-300 relative">
+<!-- Decorative corner accents -->
+<div class="absolute top-1 left-1 w-2 h-2 border-t border-l border-ink opacity-30"></div>
+<div class="absolute top-1 right-1 w-2 h-2 border-t border-r border-ink opacity-30"></div>
+<div class="absolute bottom-1 left-1 w-2 h-2 border-b border-l border-ink opacity-30"></div>
+<div class="absolute bottom-1 right-1 w-2 h-2 border-b border-r border-ink opacity-30"></div>
+<div class="w-32 md:w-48 aspect-[2/3] bg-surface-container-high border border-aged-paper flex-shrink-0 book-cover-effect overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center mix-blend-multiply opacity-80" data-alt="A detailed minimalist scientific illustration of wave patterns and atomic structures in a 19th-century etching style, rendered in charcoal grey on a warm, slightly textured off-white parchment background. The linework is precise and delicate, embodying a clean, high-contrast, light-mode academic aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCIsQEMFL_fk2OOb0gpIPyRaJwO5yIwBIrs_2p6Tln--unHrd1wfLwBx74tkDp8Y7cWytfMgN3FE6vR0w4MnZdmo90CyOAGGoYr2iv5UdSUHZpeocfbWksPVDz1aYZlVVtQ6DD-c-C2wDahEsERLgxdy8DEa31ZhQcUZpdf_sf5WZZZ8c9YXis1uj58RACwQmJH-U0njZiEUxaX2L0qi8REYl8CVw5rSTv_8Vv62Cwh6Juf9k480gnvnA')"></div>
+<div class="absolute inset-0 border border-ink opacity-10"></div>
+</div>
+<div class="flex flex-col justify-center flex-1">
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-2">Physics · Added Oct 12</p>
+<h4 class="font-title-md text-headline-lg-mobile text-ink mb-1">The Feynman Lectures on Physics</h4>
+<p class="font-body-md text-body-md text-on-surface-variant italic mb-stack-md">Volume I: Mainly Mechanics, Radiation, and Heat</p>
+<div class="mt-auto">
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-sm text-label-sm text-ink">Page 142 of 560</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">25%</span>
+</div>
+<div class="h-[2px] bg-aged-paper w-full">
+<div class="h-full bg-ink w-1/4 relative">
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-1 h-3 bg-ink"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recently Added Bento Grid -->
+<section class="mb-stack-lg">
+<h3 class="font-label-md text-label-md text-ink uppercase tracking-wider mb-stack-sm flex items-center gap-2">
+<span class="w-4 h-[1px] bg-ink"></span> Recently Added
+                    </h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<!-- Book Card 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[2/3] bg-parchment border border-aged-paper book-cover-effect relative mb-3 overflow-hidden group-hover:border-ink transition-colors duration-300">
+<div class="w-full h-full bg-cover bg-center mix-blend-multiply opacity-70" data-alt="A minimalist line art portrait of a stoic philosopher in profile, rendered in thin, precise black ink strokes on a vast, unblemished warm white paper texture. The composition is highly structured, emphasizing negative space and echoing classic, high-end editorial book cover design in a bright, light-mode palette." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMEwIUJrgpSuwzL4AvwVtlyfq9PJvCQqylttUPLaa2JQMPQfisaqKqm2MP8LRVZrQFobFm0pDcmxRT0oGCCY9cKiWgN1f7hE-PyuVx50URTRAwyKyfgI99PXUpenMUFkP8MQVv3v7o4jxgxWQRZbPEodt-BaV5wqpBLWpmMJLz4ZL5tK1CFcpAVI6UcXzV_xOpup5YxOjvr_M28-MB1AYw1DB9l_3IOmPe0UXTjEl131-nWgz14w9i9w')"></div>
+</div>
+<h4 class="font-label-md text-label-md text-ink truncate font-bold">Meditations</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate mt-1">Marcus Aurelius</p>
+</div>
+<!-- Book Card 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[2/3] bg-surface-dim border border-aged-paper book-cover-effect relative mb-3 overflow-hidden group-hover:border-ink transition-colors duration-300">
+<div class="w-full h-full bg-cover bg-center mix-blend-multiply opacity-70" data-alt="An abstract arrangement of geometric architectural shapes and drafting lines, evoking a sense of structural design and blueprints. Drawn in subtle greys and muted inks on a crisp, light parchment background. The aesthetic is clean, academic, and highly structured, suitable for a sophisticated, minimalist interface." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBFrouzqVLgxT0BGfJpHsUOFgYhKGoz0q3DBRMMT3yI6kAinHAqqa2dh70YvnlvrFwGm-0SqU2PTWOL-DnzLHci27oTAZrmKuscROzylPvAN2sKTCBw5_amjEVGaoD7Ct8JC2ZjG4xI2VFMzsFg8Lx4FU2dVekWVguIcpfU6aIXGqrEgzv6gLDPGlf9T18STsu9Z45aSOFt0vLfEk3PQP5u0nFb0HBIvvREpBwbEHgT21mB4E3bQ2JIDQ')"></div>
+</div>
+<h4 class="font-label-md text-label-md text-ink truncate font-bold">Design of Everyday Things</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate mt-1">Don Norman</p>
+</div>
+<!-- Book Card 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[2/3] bg-inverse-on-surface border border-aged-paper book-cover-effect relative mb-3 overflow-hidden group-hover:border-ink transition-colors duration-300">
+<div class="w-full h-full bg-cover bg-center mix-blend-multiply opacity-70" data-alt="A delicate, vintage-style botanical illustration of a fern leaf, created with fine black ink stippling on a pale, warm ivory background. The drawing is minimal, centered, and isolated, emphasizing natural elegance and scholarly archiving in a bright, high-contrast light-mode environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBCDX0b22ZgMoxuQb51triV2GGe56qEvU0HjmCQVnwZZwECJVEwQ9AehZ_gxsdbGv0EcEuSWFZtqhR-62WODEg6Zjco3r-K-qRZ8NubtZ9JeJaZcMSl1AEtI5IBRLyuH72w14kFJufKeekaSTdgB7uc26pU1yoKlYH8QrOEaXF_QI9cc4A3S4cAP6VAvkG1JZkuIaMWElMP9dZDYs6B9et9MJ0mRs51d_gUEAmnaKDKe_2EAdrralKIDA')"></div>
+</div>
+<h4 class="font-label-md text-label-md text-ink truncate font-bold">Origin of Species</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate mt-1">Charles Darwin</p>
+</div>
+<!-- Book Card 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-[2/3] bg-parchment border border-aged-paper book-cover-effect relative mb-3 flex items-center justify-center flex-col p-4 group-hover:border-ink transition-colors duration-300">
+<span class="material-symbols-outlined text-[32px] text-ink mb-2 font-light">add</span>
+<span class="font-label-sm text-label-sm text-ink uppercase text-center">Import<br/>Document</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Document List View -->
+<section>
+<div class="flex justify-between items-end mb-stack-sm border-b border-aged-paper pb-2">
+<h3 class="font-label-md text-label-md text-ink uppercase tracking-wider flex items-center gap-2">
+<span class="w-4 h-[1px] bg-ink"></span> My Documents
+                        </h3>
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-ink transition-colors flex items-center gap-1">
+                            Sort <span class="material-symbols-outlined text-[16px]">sort</span>
+</button>
+</div>
+<ul class="flex flex-col">
+<li class="py-3 border-b border-aged-paper hover:bg-surface-container-low transition-colors cursor-pointer flex items-center gap-4 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-ink transition-colors font-light">description</span>
+<div class="flex-1">
+<h4 class="font-body-md text-body-md text-ink leading-tight">Project Gutenberg Archive Notes</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">PDF · 2.4 MB · Last read yesterday</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</li>
+<li class="py-3 border-b border-aged-paper hover:bg-surface-container-low transition-colors cursor-pointer flex items-center gap-4 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-ink transition-colors font-light">article</span>
+<div class="flex-1">
+<h4 class="font-body-md text-body-md text-ink leading-tight">Typography in the Digital Age</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">EPUB · 1.1 MB · Added Nov 4</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</li>
+</ul>
+</section>
+</div>
+</main>
+</div>
+<!-- Mobile BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe bg-surface border-t border-aged-paper h-16 pointer-events-none opacity-0" id="mobile-nav">
+<a class="flex flex-col items-center justify-center text-ink font-bold border-t-2 border-ink pt-2 w-16" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_library</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider mt-1 scale-90">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant pt-2 w-16 hover:text-ink transition-colors" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider mt-1 scale-90">Browse</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant pt-2 w-16 hover:text-ink transition-colors" href="#">
+<span class="material-symbols-outlined">download_for_offline</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider mt-1 scale-90">Downld</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant pt-2 w-16 hover:text-ink transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider mt-1 scale-90">Settings</span>
+</a>
+</nav>
+<!-- PDF Reader Overlay (Hidden by default, shown via JS for demo) -->
+<div class="fixed inset-0 z-[120] bg-warm-white hidden flex-col" id="pdf-reader">
+<!-- Top Chrome -->
+<header class="flex justify-between items-center px-gutter py-4 border-b border-aged-paper bg-warm-white/90 backdrop-blur-sm z-10 transition-transform duration-300" id="reader-top-bar">
+<button class="text-ink hover:bg-surface-container-low p-2 transition-colors flex items-center gap-2" onclick="closeReader()">
+<span class="material-symbols-outlined">arrow_back</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider hidden md:inline">Library</span>
+</button>
+<h2 class="font-title-md text-label-md md:text-title-md text-ink truncate max-w-[50%] text-center">The Feynman Lectures on Physics</h2>
+<div class="font-label-sm text-label-sm text-on-surface-variant">142 / 560</div>
+</header>
+<!-- Document Canvas -->
+<div class="flex-1 overflow-auto bg-parchment relative flex justify-center py-stack-lg px-margin-mobile cursor-text" onclick="toggleReaderChrome()">
+<!-- Simulated Page -->
+<div class="bg-warm-white w-full max-w-3xl min-h-[1000px] border border-aged-paper shadow-[0_0_20px_rgba(0,0,0,0.03)] p-12 relative">
+<!-- Watermark / Texture overlay -->
+<div class="absolute inset-0 pointer-events-none opacity-5 mix-blend-multiply" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+<h3 class="font-display-lg text-headline-lg mb-8 text-ink text-center">Chapter 14: Work and Potential Energy</h3>
+<div class="font-body-lg text-body-lg text-ink leading-relaxed space-y-6 text-justify">
+<p class="first-letter:text-5xl first-letter:font-display-lg first-letter:mr-3 first-letter:float-left first-line:uppercase first-line:tracking-widest">In the previous chapters we have studied the laws of motion and the idea of energy. We found that the conservation of energy is a very powerful principle. It tells us that if a system is isolated, its total energy cannot change.</p>
+<p>Now we want to investigate the relationship between force and energy. Suppose a particle moves along a curve from point A to point B under the influence of a force $\mathbf{F}$. We define the <em>work</em> done by the force as the integral of the tangential component of the force along the path:</p>
+<div class="my-8 py-6 border-y border-aged-paper text-center font-display-lg text-title-md italic">
+                        W = ∫ $\mathbf{F} \cdot d\mathbf{s}$
+                    </div>
+<p>This definition is motivated by the observation that when a force acts on an object in the direction of its motion, it increases the object's kinetic energy. If the force opposes the motion, the kinetic energy decreases.</p>
+<div class="w-full h-64 border border-aged-paper my-8 relative flex items-center justify-center bg-surface-container-lowest">
+<div class="w-full h-full bg-contain bg-no-repeat bg-center mix-blend-multiply opacity-80" data-alt="A precise, minimalist scientific diagram illustrating a particle moving along a curved path from point A to point B, with force vectors indicated by thin arrows. The style mimics a 19th-century academic textbook engraving, rendered in sharp black lines on a clean white background, completely devoid of modern UI elements or shading." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuApjuEO9OQv4X43NyfhtKwc1tEhhTHSv1A7qgnZyoaT1vbycMSe2z17RiQ6NBiOQqveAn_n_Q6u2ISR1VWHhUSdIFUjFfx-aQqbHtCcmmBY8V8eTOu6Ewu6W92Nwgk3qepeHxRxQn5kXPkVpBd9UC7jZTFbj_B9-rUhrLyZf3vsFOY790dZP68FK83quz6kk4bX-MMfgEx-k9piJoMIIi7OR1PVjvSIgkaeRUGhW_1V-FQDjlfdMci-ww')"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Chrome -->
+<footer class="flex justify-center items-center gap-8 py-4 border-t border-aged-paper bg-warm-white/90 backdrop-blur-sm z-10 transition-transform duration-300" id="reader-bottom-bar">
+<button class="text-ink hover:text-on-surface-variant transition-colors flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined font-light group-hover:scale-110 transition-transform">bookmark_border</span>
+<span class="font-label-sm text-[10px] uppercase tracking-widest hidden md:block">Save</span>
+</button>
+<button class="text-ink hover:text-on-surface-variant transition-colors flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined font-light group-hover:scale-110 transition-transform">format_list_bulleted</span>
+<span class="font-label-sm text-[10px] uppercase tracking-widest hidden md:block">Contents</span>
+</button>
+<button class="text-ink hover:text-on-surface-variant transition-colors flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined font-light group-hover:scale-110 transition-transform">zoom_in</span>
+<span class="font-label-sm text-[10px] uppercase tracking-widest hidden md:block">Zoom</span>
+</button>
+<button class="text-ink hover:text-on-surface-variant transition-colors flex flex-col items-center gap-1 group">
+<span class="material-symbols-outlined font-light group-hover:scale-110 transition-transform">tune</span>
+<span class="font-label-sm text-[10px] uppercase tracking-widest hidden md:block">Display</span>
+</button>
+</footer>
+</div>
+<script>
+        // Splash screen logic
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const splash = document.getElementById('splash-screen');
+                const app = document.getElementById('app-container');
+                const mobileNav = document.getElementById('mobile-nav');
+                
+                splash.style.opacity = '0';
+                setTimeout(() => {
+                    splash.style.display = 'none';
+                    app.style.opacity = '1';
+                    app.style.pointerEvents = 'auto';
+                    mobileNav.style.opacity = '1';
+                    mobileNav.style.pointerEvents = 'auto';
+                }, 1000);
+            }, 2000);
+        });
+
+        // Reader Chrome Toggle Logic
+        let chromeVisible = true;
+        function toggleReaderChrome() {
+            const topBar = document.getElementById('reader-top-bar');
+            const bottomBar = document.getElementById('reader-bottom-bar');
+            
+            if (chromeVisible) {
+                topBar.style.transform = 'translateY(-100%)';
+                bottomBar.style.transform = 'translateY(100%)';
+            } else {
+                topBar.style.transform = 'translateY(0)';
+                bottomBar.style.transform = 'translateY(0)';
+            }
+            chromeVisible = !chromeVisible;
+        }
+
+        function closeReader() {
+            document.getElementById('pdf-reader').classList.add('hidden');
+            document.getElementById('pdf-reader').classList.remove('flex');
+        }
+
+        // Add click to open reader (for demo purposes)
+        document.querySelector('section:first-of-type .bg-parchment').addEventListener('click', () => {
+             document.getElementById('pdf-reader').classList.remove('hidden');
+             document.getElementById('pdf-reader').classList.add('flex');
+        });
+    </script>
+</body></html>

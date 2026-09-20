@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CODEXA - Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#dddad2",
+                        "inverse-on-surface": "#f4f0e8",
+                        "secondary-fixed": "#ede1cd",
+                        "surface-container-highest": "#e6e2da",
+                        "on-secondary-container": "#6a6252",
+                        "tertiary-fixed": "#ffdeac",
+                        "tertiary": "#000000",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#87837f",
+                        "tertiary-container": "#281900",
+                        "on-surface-variant": "#4b463f",
+                        "inverse-surface": "#31302b",
+                        "on-primary-fixed-variant": "#494642",
+                        "surface-tint": "#615e5a",
+                        "primary-fixed-dim": "#cbc5c0",
+                        "secondary-container": "#eadeca",
+                        "inverse-primary": "#cbc5c0",
+                        "surface-container-high": "#ece8e0",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface": "#fdf9f1",
+                        "on-tertiary-fixed-variant": "#5e4105",
+                        "on-background": "#1c1c17",
+                        "on-tertiary-fixed": "#281900",
+                        "primary-fixed": "#e8e1dc",
+                        "primary": "#000000",
+                        "on-surface": "#1c1c17",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#1d1b18",
+                        "surface-container": "#f1ede6",
+                        "outline-variant": "#cdc5bc",
+                        "secondary": "#665d4e",
+                        "outline": "#7c766e",
+                        "on-tertiary-container": "#a27e3f",
+                        "on-primary-fixed": "#1d1b18",
+                        "secondary-fixed-dim": "#d0c5b2",
+                        "surface-container-low": "#f7f3eb",
+                        "surface-bright": "#fdf9f1",
+                        "tertiary-fixed-dim": "#ebc07a",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#201b0f",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e6e2da",
+                        "background": "#fdf9f1",
+                        "on-secondary-fixed-variant": "#4d4637"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "1.25rem",
+                        "gutter": "1.5rem",
+                        "stack-md": "24px",
+                        "margin-page": "2rem",
+                        "unit": "4px",
+                        "stack-lg": "48px",
+                        "stack-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Hanken Grotesk"],
+                        "display-lg": ["Bodoni Moda"],
+                        "headline-lg-mobile": ["Bodoni Moda"],
+                        "label-md": ["Hanken Grotesk"],
+                        "body-md": ["Literata"],
+                        "body-lg": ["Literata"],
+                        "title-md": ["Bodoni Moda"],
+                        "headline-lg": ["Bodoni Moda"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["11px", { "lineHeight": "1.2", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "title-md": ["22px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .engraved-border {
+            border: 1px solid #191714;
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+        }
+        .hairline-bottom {
+            border-bottom: 0.5px solid #cdc5bc;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-container text-primary dark:text-primary-fixed font-headline-lg-mobile text-headline-lg-mobile flex justify-between items-center w-full px-margin-mobile h-16 docked full-width top-0 border-b-[0.5px] border-outline-variant dark:border-outline flat no shadows Cubic-Bezier(0.4, 0, 0.2, 1) transition-all sticky z-40 hidden md:flex">
+<button class="text-on-surface-variant dark:text-on-surface-variant hover:bg-secondary-container dark:hover:bg-secondary-container transition-colors duration-300 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<span class="font-headline-lg-mobile text-headline-lg-mobile tracking-widest text-primary dark:text-primary-fixed">CODEXA</span>
+<button class="text-on-surface-variant dark:text-on-surface-variant hover:bg-secondary-container dark:hover:bg-secondary-container transition-colors duration-300 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+</header>
+<!-- TopAppBar Mobile -->
+<header class="bg-surface dark:bg-surface-container text-primary dark:text-primary-fixed font-headline-lg-mobile text-headline-lg-mobile flex justify-between items-center w-full px-margin-mobile h-16 fixed top-0 w-full z-40 border-b-[0.5px] border-outline-variant dark:border-outline flat no shadows md:hidden">
+<span class="font-headline-lg-mobile text-headline-lg-mobile tracking-widest text-primary dark:text-primary-fixed mx-auto">CODEXA</span>
+</header>
+<div class="flex-1 flex overflow-hidden pt-16 md:pt-0">
+<!-- NavigationDrawer (Desktop) -->
+<aside class="bg-surface-container-low dark:bg-surface-container-lowest h-full w-80 rounded-r-none border-r-[0.5px] border-outline-variant dark:border-outline flat no shadows flex flex-col h-full py-stack-lg px-margin-page hidden md:flex overflow-y-auto sticky top-16" style="height: calc(100vh - 4rem);">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 rounded-full overflow-hidden engraved-border">
+<img class="object-cover w-full h-full" data-alt="A refined, minimalist avatar portrait of a distinguished scholar. Highly detailed, evoking a 19th-century academic aesthetic with soft, warm white lighting on a parchment background. Deep charcoal and aged paper tones. Calm and authoritative mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAudiRIcyM9puT8FIUMUf74wnpFiGV4GL0c83_LDGkBxaJA5P8Lzn58z7YAuFH_BhpbyRIHg0IlvVNXrH-Fl2NkZddssPhgeQ3pOaD6nNxahAWm15mA884YCA1R3ua4G0WW6F_yYJCOIeO35zp3a2sPt3bXidm1oeJEGb4upOeypNC-FCbnCj8xBStX_5BjuWd73fTjc78ZQHLjl9wuBxv9DukDVBDx3GjHqxmdKnxrwGaVdrMwbnPoqg"/>
+</div>
+<div>
+<h2 class="font-title-md text-title-md text-primary dark:text-primary-fixed">Ex Libris</h2>
+<p class="font-label-md text-label-md text-on-surface-variant dark:text-outline">Personal Archive</p>
+<p class="font-label-sm text-label-sm text-outline mt-1 uppercase tracking-wider">128 Volumes</p>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-2">
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant dark:text-outline hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all glide-in-out duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu_book</span>
+<span class="font-label-md text-label-md">All Books</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant dark:text-outline hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all glide-in-out duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">auto_stories</span>
+<span class="font-label-md text-label-md">Favorites</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant dark:text-outline hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all glide-in-out duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">history</span>
+<span class="font-label-md text-label-md">Recent</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant dark:text-outline hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all glide-in-out duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">inventory_2</span>
+<span class="font-label-md text-label-md">Archive</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-on-surface-variant dark:text-outline hover:bg-surface-container-high dark:hover:bg-inverse-surface transition-all glide-in-out duration-300" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">sell</span>
+<span class="font-label-md text-label-md">Tags</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto pb-24 md:pb-8 bg-surface-bright">
+<div class="max-w-4xl mx-auto px-margin-mobile md:px-gutter py-stack-lg">
+<h1 class="font-display-lg text-display-lg text-primary mb-stack-md text-center md:text-left">Settings</h1>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Settings Sections -->
+<div class="col-span-1 md:col-span-10 md:col-start-2 flex flex-col gap-stack-md">
+<!-- Account -->
+<section class="bg-surface-container-low border border-outline-variant p-6 rounded-none relative">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-white opacity-50"></div>
+<h2 class="font-title-md text-title-md text-primary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 0;">person</span> Account
+                            </h2>
+<div class="space-y-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between py-3 hairline-bottom">
+<div>
+<p class="font-body-md text-body-md text-primary">Email Address</p>
+<p class="font-label-sm text-label-sm text-outline mt-1">scholar@exlibris.com</p>
+</div>
+<button class="mt-2 sm:mt-0 px-4 py-2 border border-primary text-primary font-label-md text-label-md hover:bg-surface-container transition-colors">Edit</button>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between py-3 hairline-bottom">
+<div>
+<p class="font-body-md text-body-md text-primary">Google Drive Sync</p>
+<p class="font-label-sm text-label-sm text-outline mt-1">Connected</p>
+</div>
+<button class="mt-2 sm:mt-0 px-4 py-2 border border-outline text-outline font-label-md text-label-md hover:bg-surface-container transition-colors">Disconnect</button>
+</div>
+</div>
+</section>
+<!-- Appearance -->
+<section class="bg-surface-container-low border border-outline-variant p-6 rounded-none relative">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-white opacity-50"></div>
+<h2 class="font-title-md text-title-md text-primary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 0;">palette</span> Appearance
+                            </h2>
+<div class="space-y-4">
+<div class="flex items-center justify-between py-3 hairline-bottom">
+<div>
+<p class="font-body-md text-body-md text-primary">Theme</p>
+<p class="font-label-sm text-label-sm text-outline mt-1">System Default</p>
+</div>
+<div class="flex gap-2">
+<button class="w-8 h-8 rounded-full bg-surface border border-primary flex items-center justify-center relative">
+<div class="w-3 h-3 rounded-full bg-primary absolute"></div>
+</button>
+<button class="w-8 h-8 rounded-full bg-inverse-surface border border-outline flex items-center justify-center"></button>
+</div>
+</div>
+<div class="flex flex-col py-3">
+<p class="font-body-md text-body-md text-primary mb-2">Typography</p>
+<p class="font-label-sm text-label-sm text-outline mb-4">Select your preferred reading font.</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="border border-primary bg-surface-bright p-4 text-center cursor-pointer">
+<p class="font-body-lg text-body-lg text-primary">Literata</p>
+</div>
+<div class="border border-outline-variant hover:border-outline bg-surface p-4 text-center cursor-pointer transition-colors">
+<p class="font-[Inter] text-lg text-on-surface-variant">System Sans</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Reader -->
+<section class="bg-surface-container-low border border-outline-variant p-6 rounded-none relative">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-white opacity-50"></div>
+<h2 class="font-title-md text-title-md text-primary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 0;">chrome_reader_mode</span> Reader
+                            </h2>
+<div class="space-y-4">
+<div class="flex items-center justify-between py-3 hairline-bottom">
+<div>
+<p class="font-body-md text-body-md text-primary">Page Turn Animation</p>
+<p class="font-label-sm text-label-sm text-outline mt-1">Glide</p>
+</div>
+<div class="w-12 h-6 bg-secondary-fixed rounded-full relative cursor-pointer border border-primary">
+<div class="w-4 h-4 bg-primary rounded-full absolute right-1 top-1"></div>
+</div>
+</div>
+<div class="flex items-center justify-between py-3">
+<div>
+<p class="font-body-md text-body-md text-primary">Show Progress Bar</p>
+</div>
+<div class="w-12 h-6 bg-surface-container-high rounded-full relative cursor-pointer border border-outline">
+<div class="w-4 h-4 bg-outline rounded-full absolute left-1 top-1"></div>
+</div>
+</div>
+</div>
+</section>
+<div class="flex justify-center mt-stack-lg">
+<button class="px-8 py-3 border border-error text-error font-label-md text-label-md hover:bg-error-container transition-colors">Sign Out</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 w-full z-50 border-t-[0.5px] border-outline-variant dark:border-outline flat no shadows fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe bg-surface dark:bg-surface-container h-16 md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline pt-2 hover:text-primary dark:hover:text-primary-fixed transition-colors Active: opacity-80 scale-95 duration-200 w-1/4" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">local_library</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline pt-2 hover:text-primary dark:hover:text-primary-fixed transition-colors Active: opacity-80 scale-95 duration-200 w-1/4" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">explore</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Browse</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline pt-2 hover:text-primary dark:hover:text-primary-fixed transition-colors Active: opacity-80 scale-95 duration-200 w-1/4" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">download_for_offline</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Downloads</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-on-tertiary-container font-bold border-t-2 border-primary dark:border-tertiary-fixed-dim pt-2 hover:text-primary dark:hover:text-primary-fixed transition-colors Active: opacity-80 scale-95 duration-200 w-1/4" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Settings</span>
+</a>
+</nav>
+</body></html>
